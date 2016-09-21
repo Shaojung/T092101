@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,5 +33,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(MainActivity.this, "Long Click: " + fruits[position], Toast.LENGTH_SHORT).show();
+                return true;
+            }
+        });
     }
 }
