@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                                         MainActivity.this,
-                                        android.R.layout.simple_list_item_1,
+                                        R.layout.myitem,
                                         fruits);
-        lv.setAdapter(adapter);
+         lv.setAdapter(adapter);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
